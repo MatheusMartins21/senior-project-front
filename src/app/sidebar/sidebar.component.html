@@ -1,0 +1,8 @@
+<p-sidebar [ngStyle]="{backgroundColor:'var(--blue-500)'}" [(visible)]="display" (onHide)="closeSidebar()">
+  <a [routerLink]="['']"><img src="assets/images/logo.png" alt="Senior" /></a>
+
+  <ul>
+    <li routerLinkActive="active"><a [routerLink]="['items']"><i class="pi pi-list"></i> Lista de Itens</a></li>
+    <li routerLinkActive="active"><a [routerLink]="['about']"><i class="pi pi-user"></i> Sobre mim</a></li>
+  </ul>
+</p-sidebar>

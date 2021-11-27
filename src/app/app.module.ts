@@ -1,16 +1,35 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
+import { ROUTES } from './app.routes'
+
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppComponent } from './app.component';
+
+import { SidebarModule } from 'primeng/sidebar';
+import { ButtonModule } from 'primeng/button';
+
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ItemsComponent } from './items/items.component';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SidebarComponent,
+    ItemsComponent,
+    AboutComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot(ROUTES),
+    SidebarModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
