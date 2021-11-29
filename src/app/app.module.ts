@@ -10,11 +10,13 @@ import { AppComponent } from './app.component';
 
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ItemsComponent } from './items/items.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { ItemsService } from './items/items.service';
 
 @NgModule({
   declarations: [
@@ -22,16 +24,17 @@ import { HomeComponent } from './home/home.component';
     SidebarComponent,
     ItemsComponent,
     AboutComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES),
     SidebarModule,
-    ButtonModule
+    ButtonModule,
+    TableModule
   ],
-  providers: [],
+  providers: [ItemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

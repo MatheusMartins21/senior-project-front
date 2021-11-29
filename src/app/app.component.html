@@ -2,7 +2,7 @@
 <sen-sidebar [display]="display" (onHideSidebar)="onHideSidebar($event)"></sen-sidebar>
 
 <div class="container">
-  <p-button class="p-mb-5" type="text" (click)="toggleDisplay()" icon="pi pi-bars"></p-button>
+  <button pButton pRipple class="p-mb-5" type="button" (click)="toggleDisplay()" icon="pi pi-bars"></button>
 
   <router-outlet></router-outlet>
 </div>
