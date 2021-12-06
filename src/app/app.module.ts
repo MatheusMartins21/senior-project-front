@@ -17,6 +17,8 @@ import { ItemsComponent } from './items/items.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ItemsService } from './items/items.service';
+import { ItemsCreateComponent } from './items-create/items-create.component';
+import { ItemsUpdateComponent } from './items-update/items-update.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ItemsService } from './items/items.service';
     SidebarComponent,
     ItemsComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    ItemsCreateComponent,
+    ItemsUpdateComponent,
   ],
   imports: [
     BrowserModule,
