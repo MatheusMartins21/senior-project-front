@@ -20,3 +20,17 @@ Ao adicionar um novo item, o usuário pode excluir um item clicando na lixeira e
 
 Ou editar clicando no lápis.
 ![Botão para editar um item](https://i.imgur.com/HoMkZtm.png)
+
+## Features para incluir:
+- Campos com unidade de medida em litro deve permitir somente números, com até 3 casas decimais e apresentar a 
+abreviatura “lt” ao final do campo (addon);
+
+- Campos com unidade de medida em Quilograma deve permitir somente números, com até 3 casas decimais e 
+apresentar a abreviatura “kg” ao final do campo (addon);
+
+- Campos com unidade de medida em Unidade deve permitir somente números inteiros e apresentar a abreviatura “un” 
+ao final do campo (addon);
+
+- Validação de campo monetário.
+
+-  Local Storage
