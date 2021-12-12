@@ -1,27 +1,22 @@
-# SeniorProjectFront
+# Projeto para a vaga de Front end na empresa Senior.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
+## Servidor de Desenvolvimento
 
-## Development server
+Rode o comando `ng serve` para criar um servidor de desenvolvimento. A aplicação estará disponível a partir da URL `http://localhost:4200/`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+A aplicação atualizará automaticamente caso você faça alguma alteração no código fonte.
 
-## Code scaffolding
+## Navegação
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ao abrir a aplicação, o usuário deve clicar no botão no canto superior esquerdo para acessar o menu.
 
-## Build
+![Botão para acessar o menu da aplicação](https://i.imgur.com/FCmLC5N.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ao selecionar o menu "Lista de Itens", o usuário deve clicar no botão "+" para incluir um novo item.
+![Botão para incluir um novo item](https://i.imgur.com/AAnUtsk.png)
 
-## Running unit tests
+Ao adicionar um novo item, o usuário pode excluir um item clicando na lixeira e confirmando a exclusão.
+![Botão para excluir um item](https://i.imgur.com/x3DDwb0.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Ou editar clicando no lápis.
+![Botão para editar um item](https://i.imgur.com/HoMkZtm.png)
