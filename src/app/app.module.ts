@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { ROUTES } from './app.routes'
 
@@ -11,6 +12,10 @@ import { AppComponent } from './app.component';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { InputTextModule } from 'primeng/inputtext';
+import { DropdownModule } from 'primeng/dropdown';
+import { CalendarModule } from 'primeng/calendar';
+import { ToastModule } from 'primeng/toast';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ItemsComponent } from './items/items.component';
@@ -28,7 +33,7 @@ import { ItemsUpdateComponent } from './items-update/items-update.component';
     AboutComponent,
     HomeComponent,
     ItemsCreateComponent,
-    ItemsUpdateComponent,
+    ItemsUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,12 @@ import { ItemsUpdateComponent } from './items-update/items-update.component';
     RouterModule.forRoot(ROUTES),
     SidebarModule,
     ButtonModule,
-    TableModule
+    TableModule,
+    FormsModule,
+    InputTextModule,
+    DropdownModule,
+    CalendarModule,
+    ToastModule
   ],
   providers: [ItemsService],
   bootstrap: [AppComponent]

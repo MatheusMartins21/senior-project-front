@@ -1,1 +1,46 @@
-<p>items-create works!</p>
+<p-toast></p-toast>
+
+<h1>Cadastro de Itens</h1>
+<form (ngSubmit)="createItem()">
+  <div class="inputGroup">
+    <div class="p-field">
+      <label for="name">Nome</label>
+      <input [(ngModel)]="name" name="name" id="name" type="text" pInputText />
+    </div>
+
+    <div class="p-field">
+      <label for="unitMeasurement">Unidade de medida</label>
+      <p-dropdown [(ngModel)]="unitMeasurement" name="unitMeasurement" id="unitMeasurement" [options]="unitMeasurementList" optionValue="value" optionLabel="name"></p-dropdown>
+    </div>
+
+    <div class="p-field">
+      <label for="quantity">Quantidade</label>
+      <input [(ngModel)]="quantity" name="quantity" id="quantity" type="number" pInputText />
+    </div>
+
+    <div class="p-field">
+      <label for="price">Preço</label>
+      <input [(ngModel)]="price" name="price" id="price" type="number" pInputText />
+    </div>
+
+    <div class="p-field">
+      <label for="isPerishable">Produto perecível</label>
+      <p-dropdown [(ngModel)]="isPerishable" name="isPerishable" id="isPerishable" [options]="isPerishableList" optionValue="value" optionLabel="name"></p-dropdown>
+    </div>
+
+    <div class="p-field">
+      <label for="expirationDate">Data de Validade</label>
+      <p-calendar [(ngModel)]="expirationDate" name="expirationDate" dateFormat="dd/mm/yy"></p-calendar>
+    </div>
+
+    <div class="p-field">
+      <label for="manufacturingDate">Data de fabricação</label>
+      <p-calendar [(ngModel)]="manufacturingDate" name="manufacturingDate" dateFormat="dd/mm/yy"></p-calendar>
+    </div>
+  </div>
+
+  <div class="buttonGroup">
+    <button pButton pRipple type="submit" class="p-button-primary">Salvar</button>
+    <button [routerLink]="['/items']" pButton pRipple type="button" class="p-button-secondary">Cancelar</button>
+  </div>
+</form>
