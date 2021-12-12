@@ -68,13 +68,12 @@ export class ItemsCreateComponent implements OnInit {
       error = true;
     }
 
-    if(item.isPerishable == true && item.expirationDate == undefined) {
+    if(item.manufacturingDate == undefined) {
       this.messageService.add({severity:'warn', summary:'Aviso!', detail:'Por favor, informe uma data de fabricação válida para o produto.'});
       error = true;
     }
 
-    if(error == true)
-      return;
+    return error;
   }
 
   createItem() {
@@ -89,7 +88,10 @@ export class ItemsCreateComponent implements OnInit {
       manufacturingDate: this.manufacturingDate
     };
 
-    this.validateItem([newItem]);
+    const validation = this.validateItem([newItem]);
+
+    if(validation == true)
+      return;
 
     this.items.push(newItem);
     this.setItems(this.items);

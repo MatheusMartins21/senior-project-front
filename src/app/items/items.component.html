@@ -42,8 +42,8 @@
       <td>{{ item.quantity }}</td>
       <td>{{ item.price }}</td>
       <td>{{ item.isPerishable ? 'Sim' : 'Não' }}</td>
-      <td>{{ item.expirationDate.toLocaleDateString("pt-BR") }}</td>
-      <td>{{ item.manufacturingDate.toLocaleDateString("pt-BR") }}</td>
+      <td>{{ item.expirationDate == undefined ? '' : item.expirationDate.toLocaleDateString("pt-BR") }}</td>
+      <td>{{ item.manufacturingDate == undefined ? '' : item.manufacturingDate.toLocaleDateString("pt-BR") }}</td>
       <td>
         <button pButton pRipple type="button" icon="pi pi-trash" class="p-button-danger" (click)="handleRemoveItem(item.uuid)" ></button>
         <button pButton pRipple type="button" icon="pi pi-pencil" class="p-button-warning" (click)="handleEditItem(item.uuid)"></button>
