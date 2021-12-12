@@ -50,6 +50,33 @@ export class ItemsUpdateComponent implements OnInit {
     this.itemsService.itemsData = items;
   }
 
+  validateItem(items: Items[]) {
+    let error = false;
+    const [ item ] = items;
+
+    if(item.name == undefined) {
+      this.messageService.add({severity:'warn', summary:'Aviso!', detail:'Por favor, digite um nome válido para o produto.'});
+      error = true;
+    }
+
+    if(item.price == undefined) {
+      this.messageService.add({severity:'warn', summary:'Aviso!', detail:'Por favor, digite um preço válido para o produto.'});
+      error = true;
+    }
+
+    if(item.isPerishable == true && item.expirationDate == undefined) {
+      this.messageService.add({severity:'warn', summary:'Aviso!', detail:'Por favor, informe uma data de validade válida para o produto.'});
+      error = true;
+    }
+
+    if(item.manufacturingDate == undefined) {
+      this.messageService.add({severity:'warn', summary:'Aviso!', detail:'Por favor, informe uma data de fabricação válida para o produto.'});
+      error = true;
+    }
+
+    return error;
+  }
+
   updateItem() {
     const newItem = {
       uuid: this.uuid,
@@ -61,6 +88,11 @@ export class ItemsUpdateComponent implements OnInit {
       expirationDate: this.expirationDate,
       manufacturingDate: this.manufacturingDate
     };
+
+    const validation = this.validateItem([newItem]);
+
+    if(validation == true)
+      return;
 
     const newItems = this.items.map(item => item.uuid == this.uuid ? {
       ...item,
