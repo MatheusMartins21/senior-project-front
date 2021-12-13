@@ -53,22 +53,22 @@ export class ItemsCreateComponent implements OnInit {
     let error = false;
     const [ item ] = items;
 
-    if(item.name == undefined) {
+    if(!item.name) {
       this.messageService.add({severity:'warn', summary:'Aviso!', detail:'Por favor, digite um nome válido para o produto.'});
       error = true;
     }
 
-    if(item.price == undefined) {
+    if(!item.price) {
       this.messageService.add({severity:'warn', summary:'Aviso!', detail:'Por favor, digite um preço válido para o produto.'});
       error = true;
     }
 
-    if(item.isPerishable == true && item.expirationDate == undefined) {
+    if(item.isPerishable == true && !item.expirationDate) {
       this.messageService.add({severity:'warn', summary:'Aviso!', detail:'Por favor, informe uma data de validade válida para o produto.'});
       error = true;
     }
 
-    if(item.manufacturingDate == undefined) {
+    if(!item.manufacturingDate) {
       this.messageService.add({severity:'warn', summary:'Aviso!', detail:'Por favor, informe uma data de fabricação válida para o produto.'});
       error = true;
     }
